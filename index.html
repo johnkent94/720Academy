@@ -150,23 +150,23 @@
                             <div class="app-title">
                                 <h2>Application Form</h2>
                             </div>
-                            <form action="#">
+                            <form id="wrapped" method="POST">
                                 <div class="app-form">
 
                                     <div class="app-field">
-                                        <input type="text" name="app1" placeholder="Your Name" required>
+                                        <input type="text" name="applicant_name" id="applicant_name" placeholder="Your Name" required>
                                         <span class="icon-style"><i class="fa fa-user"></i></span>
                                     </div>
                                     <div class="app-field">
-                                        <input type="email" name="app2" placeholder="Your Email" required>
+                                        <input type="email" id="applicant_email" name="applicant_email" placeholder="Your Email" required>
                                         <span class="icon-style"><i class="fa fa-envelope-o"></i></span>
                                     </div>
                                     <div class="app-field">
-                                        <input type="text" name="app3" placeholder="Your Phone" required>
+                                        <input type="text" id="applicant_phone" name="applicant_phone" placeholder="Your Phone" required>
                                         <span class="icon-style"><i class="fa fa-phone"></i></span>
                                     </div>
                                     <div class="app-field">
-                                        <select class="select-course" name="time" required>
+                                        <select class="select-course" id="course_cohort" name="course_cohort" required>
 											  <option value="">Select Cohort</option>
 											  <option value="summer">Summer</option>
 											  <option value="Winter">Winter</option>
@@ -176,7 +176,7 @@
                                         <span class="icon-style2"><i class="fa fa-angle-down "></i></span>
                                     </div>
                                     <div class="app-field">
-                                        <select class="select-car" name="car" required>
+                                        <select class="select-car" id="training_mode" name="training_mode" required>
 											  <option value="">Training Mode</option>
 											  <option value="Physical">Physical</option>
 											  <option value="vitual">Vitual (T & C)</option>
@@ -185,16 +185,16 @@
                                         <span class="icon-style2"><i class="fa fa-angle-down "></i></span>
                                     </div>
                                     <div class="app-field">
-                                        <select class="select-car" name="car" required>
+                                        <select class="select-car" id="course_name" name="course_name" required>
 											  <option value="">Select Course</option>
-											  <option value="volvo">Front-end development</option>
-											  <option value="saab">Back-end development</option>
-											  <option value="mercedes">UI/UX design</option>
-											  <option value="audi">Digital Marketing</option>
-											  <option value="volvo">Graphics Design</option>
-											  <option value="saab">Data Analytics</option>
-											  <option value="mercedes">Mobile App Development</option>
-											  <option value="audi">CMS - Wordpress</option>
+											  <option value="Front-end development">Front-end development</option>
+											  <option value="Back-end development">Back-end development</option>
+											  <option value="UI/UX design">UI/UX design</option>
+											  <option value="Digital Marketing">Digital Marketing</option>
+											  <option value="Graphics Design">Graphics Design</option>
+											  <option value="Data Analytics">Data Analytics</option>
+											  <option value="Mobile App Development">Mobile App Development</option>
+											  <option value="CMS - Wordpress">CMS - Wordpress</option>
 										</select>
                                         <span class="icon-style"><i class="fa fa-book"></i></span>
                                         <span class="icon-style2"><i class="fa fa-angle-down "></i></span>
@@ -202,7 +202,7 @@
 
                                 </div>
                                 <div class="app-btn">
-                                    <button type="submit">Submit</button>
+                                    <button type="submit" id="submit" name="submit">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -1323,6 +1323,10 @@
     <!-- jquery-1.11.3.min js
 		============================================ -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
+
+    <!--Process the Application Form-->
+    <script src="process.js"></script>
+
 
     <!-- Machonary Js
 		============================================ -->
